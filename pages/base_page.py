@@ -11,9 +11,8 @@ class BasePage:
     def find_element(self, locator):
         return self.driver.find_element(By.CSS_SELECTOR, locator)
 
-    def find_element(self, locator):
-        return self.driver.find_element(By.ID, locator)
-
-
-    def find_element(self, locator):
-        return self.driver.find_element(By.NAME, locator)
+    # def find_element(self, locator):
+    #     return self.driver.find_element(By.ID, locator)
+    #
+    # def find_element(self, locator):
+    #     return self.driver.find_element(By.NAME, locator)
