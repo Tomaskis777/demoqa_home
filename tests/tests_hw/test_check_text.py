@@ -30,30 +30,38 @@
 #     else:
 #         return False
 
+# import unittest
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# class TestCheckText(unittest.TestCase):
+#
+#     def get_text(self):
+#         return self.driver.find_element(By.CSS_SELECTOR, '#app > footer').text
+#
+#     def setUp(self):
+#         self.driver = webdriver.Chrome()
+#
+#     def test_text_in_footer(self):
+#         # Перейти на страницу 'https://demoqa.com/'
+#         driver = self.driver
+#         driver.get("https://demoqa.com/")
+#
+#         # Проверить текст в подвале
+#         footer_text = self.driver.find_element(By.CSS_SELECTOR, '#app > footer').text
+#         expected_text = "© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED."
+#         self.assertEqual(footer_text, expected_text)
+#
+#     # Метод tearDown() для закрытия браузера после теста
+#     def tearDown(self):
+#         self.driver.quit()
+
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 class TestCheckText(unittest.TestCase):
 
     def get_text(self):
-        return self.driver.find_element(By.CSS_SELECTOR, '#app > footer').text
-
-    def setUp(self):
-        self.driver = webdriver.Chrome()
-
-    def test_text_in_footer(self):
-        # Перейти на страницу 'https://demoqa.com/'
-        driver = self.driver
-        driver.get("https://demoqa.com/")
-
-        # Проверить текст в подвале
-        footer_text = self.driver.find_element(By.CSS_SELECTOR, '#app > footer').text
-        expected_text = "© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED."
-        self.assertEqual(footer_text, expected_text)
-
-    # Метод tearDown() для закрытия браузера после теста
-    def tearDown(self):
-        self.driver.quit()
+        return self.driver.find_element(By.CSS_SELECTOR, '#app > div > div > div > div.col-12.mt-4.col-md-6').text
 
     def setUp(self):
         self.driver = webdriver.Chrome()
